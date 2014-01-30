@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio Template for Bootstrap</title>
+    <title>Somerville Community Budgeting</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -50,15 +50,15 @@ They load to the specified containers -->
         type: 'column'
         },
     title: {
-                text: 'Property Taxes, 2012'
+                text: 'Property Taxes, FY2014'
             },
          subtitle: {
                 text: 'Source: City of Somerville'
             },
         
         xAxis: {
-                categories: ['Cambridge','Brookline','Somerville','Boston','Saugus','Watertown','Malden','Chelsea','Medford',
-                 'Winchester','Melrose','Belmont','Everett','Arlington','Revere','Lynn']
+                categories: ['Cambridge','Brookline','Somerville','Boston','Saugus','Watertown','Malden','Medford',
+                 'Winchester','Everett','Chelsea','Melrose','Belmont','Arlington','Revere','Lynn']
             },
     yAxis: {
                 title: {
@@ -81,10 +81,9 @@ They load to the specified containers -->
 
         series: [{
         name: 'Property Tax',
-            data: [1709,2706,{
-                y: 3482,
-                color: '#263c53'
-            },3532,4512,4636,4793,4935,4944,5108,5212,5332,5433,5444,6224,6772]
+            data: [1545,2561,{
+                y: 3178,
+                color: '#263c53'},3268,4644,4706,4801,4900,5064,5187,5193,5312,5400,5516,6220,6852]
           }]
     });
 
@@ -160,6 +159,7 @@ They load to the specified containers -->
 
 
     <!-- Side Menu -->
+<!--
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -178,6 +178,7 @@ They load to the specified containers -->
             </li>
         </ul>
     </div>
+-->
     <!-- /Side Menu -->
 
     <!-- Full Page Image Header Area -->
@@ -186,7 +187,7 @@ They load to the specified containers -->
             <h1>Community Budgeting</h1>
             <h3>
                 We Want
-                <em>You</em> To Make The Budget Better</h3>
+                <em>You</em> to Make the Budget Better</h3>
             <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
         </div>
     </div>
@@ -198,7 +199,7 @@ They load to the specified containers -->
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <h2>The City of Somerville is looking for input on some key investment areas</h2>
-                    <p class="lead">This year in the community budget process, we are going to focus on four areas that align with community values: arts and culture, recreation, public health, civic engagement (including immigrant outreach). To help you put this all in context, we have put together a few resources that will allow citizens to dive deep into the data and give their feedback...</a></p>
+                    <p class="lead">In this year's community budgeting process, we are going to focus on four areas that align with community values: arts and culture, recreation, public health, and civic engagement (including immigrant outreach). To help you put this all in context, we have put together a few resources that will allow you to dive deep into the data and give your feedback...</a></p>
                 </div>
             </div>
         </div>
@@ -218,29 +219,29 @@ They load to the specified containers -->
                 <div class="col-md-2 col-md-offset-2 text-center">
                     <div class="service-item">
                         <i class="service-icon fa ">1</i>
-                        <h4>Learn About the Budget</h4>
-                        <p>The buget is a complex system. Lorem Ipsum.</p>
+                        <h4>Learn about the Budget</h4>
+                        <p>The buget is a complex system. Check out the data below and attend a meeting to learn more about it.</p>
                     </div>
                 </div>
                 <div class="col-md-2 text-center">
                     <div class="service-item">
                         <i class="service-icon fa">2</i>
-                        <h4>Review City Data</h4>
-                        <p>Making decisions on important city policies without data is like driving with a blindfold on.</p>
+                        <h4>Review Other City Data</h4>
+                        <p>Making decisions on important city policies without data is like driving with a blindfold on. Our Key System Indicators summarize the broader context in which budgeting decisions are made.</p>
                     </div>
                 </div>
                 <div class="col-md-2 text-center">
                     <div class="service-item">
                         <i class="service-icon fa">3</i>
                         <h4>Attend a Meeting</h4>
-                        <p>The Mayor and his team are inviting everyone to attend a meeting to discuss budget priorities.</p>
+                        <p>The Mayor and his team are inviting everyone to attend a community budgeting meeting to give their input on four key investment areas.</p>
                     </div>
                 </div>
                 <div class="col-md-2 text-center">
                     <div class="service-item">
                         <i class="service-icon fa">4</i>
                         <h4>Stay Tuned</h4>
-                        <p>Following the budget meetings, we hope to have a host of bright ideas on ways to improve the budget. </p>
+                        <p>We hope the budget meetings will result in a host of bright ideas on where we should invest. We'll want your input on which ones are best for Somerville.</p>
                     </div>
                 </div>
             </div>
@@ -259,27 +260,30 @@ They load to the specified containers -->
     <!-- Fiscal Management -->
 <div class="container">
     <div class="marketing">
-    <div class="row-fluid">
-      <h1>Fiscal Management</h1>
-        <p>Somerville has some of the lowest property taxes in the metropolitan area when the residential exemption is factored in.
-        The City has had to rely more on taxes as state aid has delined, but still maintains a generous exemption for residents.
-        The largest categories of expenditures are the schools, public safety and works, and the pensions and benefits of employees.</p>
-        <div id="PropertyTaxChartContainer" style="width:100%; height:400px;"></div> 
-    </div>
-
-<br></br>
-
-    <div class="row"> 
-        <div class="span6">
-        <div id="RevChartContainer" style="width:100%; height:400px;"></div>
+        <div class="row-fluid">
+            <p>Somerville has some of the lowest property taxes in the metropolitan area when the residential exemption is factored in. The City has had to rely more on taxes as state aid has delined, but still maintains a generous exemption for residents. The largest categories of expenditures are the schools, public safety and works, and the pensions and benefits of employees.</p>
+                <div id="PropertyTaxChartContainer" style="width:100%; height:400px;"></div> 
         </div>
-        <div class="span6">
-        <div id="ExChartContainer" style="width:100%; height:400px;"></div>
-        </div>
-    </div>
     </div>
 </div>
 
+<br></br>
+
+<div class="container">
+    <div class="marketing">
+        <div class="row"> 
+            <div class="span6">
+                <div id="RevChartContainer" style="width:100%; height:400px;"></div>
+            </div>
+<br></br>
+            <div class="span6">
+                <div id="ExChartContainer" style="width:100%; height:400px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br></br>
 
     <!-- Call to Action -->
     <div class="call-to-action">
@@ -287,7 +291,7 @@ They load to the specified containers -->
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <h3>View Other Data and Attend a Meeting</h3>
-                    <a href="http://www.somervillema.gov/dashboard/index.html" target="_blank" class="btn btn-lg btn-default">Data Dashboard</a>
+                    <a href="http://www.somervillema.gov/dashboard/index.html" target="_blank" class="btn btn-lg btn-default">Key System Indicators</a>
                     <a href="#" class="btn btn-lg btn-primary">Budget Calendar</a>
                 </div>
             </div>
