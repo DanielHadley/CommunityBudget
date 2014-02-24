@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Somerville Community Budgeting</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Highcharts scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/highcharts.js"></script>
+
+</head>
+
+<body>
+
+    <!-- The Charts are all here so that I can style them in a similar way.
+They load to the specified containers -->
+
+<script>
+    $(function() {
+    Highcharts.setOptions({
+        chart: {
+            backgroundColor: 'rgba(230, 230, 230, .9)',
+            borderWidth: 1,
+            plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+            plotShadow: true,
+            plotBorderWidth: 1,
+        style: {
+            fontFamily: 'Helvetica'
+        }
+        }
+    });
+
+    
+<!-- Property Tax -->
+    var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'PropertyTaxChartContainer',
+        type: 'column'
+        },
+    title: {
+                text: 'Property Taxes, FY2014'
+            },
+         subtitle: {
+                text: 'Source: City of Somerville'
+            },
+        
+        xAxis: {
+                categories: ['Cambridge','Brookline','Somerville','Boston','Saugus','Watertown','Malden','Medford',
+                 'Winchester','Everett','Chelsea','Melrose','Belmont','Arlington','Revere','Lynn']
+            },
+    yAxis: {
+                title: {
+                    text: 'Tax on $400,000 Property with Residential Exemption ($)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+        
+    tooltip: {
+            pointFormat: '<b>${point.y:,.0f}</b>'
+        },
+    
+    legend: {
+        enabled: false
+    },
+
+        series: [{
+        name: 'Property Tax',
+            data: [1545,2561,{
+                y: 3178,
+                color: '#263c53'},3268,4644,4706,4801,4900,5064,5187,5193,5312,5400,5516,6220,6852]
+          }]
+    });
+
+<!-- Revenue -->
+    var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'RevChartContainer',
+        type: 'pie'
+        },
+    title: {
+                text: 'Revenue, FY2014'
+            },
+         subtitle: {
+                text: 'Source: City of Somerville'
+            },
+        
+        
+    tooltip: {
+            pointFormat: '<b>${point.y:,.0f}</b>'
+        },
+
+        series: [{
+        name: 'Revenue',
+            data: [
+                ['Taxes',   123320008.4],
+                ['State Aid',       46979050.8],
+                ['Other',    9787302.25],
+                ['Fines and Forfeits',     7829841.8],
+                ['Licenses and Permits',   5872381.35],
+        ['Fees', 1174476.27],
+        ['Penalities and Interest', 978730.225],
+        ['Misc Recurring', 391492.09]
+        ]
+    }]
+    });
+    
+<!-- Expenditures -->
+    var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'ExChartContainer',
+        type: 'pie'
+        },
+    title: {
+                text: 'Expenditures, FY2014'
+            },
+         subtitle: {
+                text: 'Source: City of Somerville'
+            },
+        
+    tooltip: {
+            pointFormat: '<b>${point.y:,.0f}</b>'
+        },
+
+        series: [{
+        name: 'Expenditures',
+            data: [
+                ['School Department',   56766353],
+                ['Public Safety',       37191748],
+                ['Pension and Fringe',    35234288],
+                ['Public Works',     23489525],
+                ['General Government',   15659684],
+        ['State Assessments', 11744763],
+        ['Debt Service', 9787302],
+        ['Culture and Recreation', 2740445],
+        ['Other', 1761714],
+        ['Overlay Reserve', 1565968]
+        ]
+    }]
+    });
+});
+
+</script>
+
+
+    <!-- Side Menu -->
+<!--
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand"><a href="http://startbootstrap.com">Community Budgeting</a>
+            </li>
+            <li><a href="#top">Home</a>
+            </li>
+            <li><a href="#about">About</a>
+            </li>
+            <li><a href="#services">Services</a>
+            </li>
+            <li><a href="#portfolio">Portfolio</a>
+            </li>
+            <li><a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+-->
+    <!-- /Side Menu -->
+
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+        <div class="vert-text">
+            <h1>Community Budgeting</h1>
+            <h3>
+                We Want
+                <em>You</em> to Make the Budget Better</h3>
+            <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
+        </div>
+    </div>
+    <!-- /Full Page Image Header Area -->
+
+    <!-- Intro -->
+    <div id="about" class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2>The City of Somerville is looking for input on some key investment areas</h2>
+                    <p class="lead">In this year's community budgeting process, we are going to focus on four areas that align with community values: arts and culture, recreation, public health, and civic engagement (including immigrant outreach). To help you put this all in context, we have put together a few resources that will allow you to dive deep into the data and give your feedback...</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Intro -->
+
+    <!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2>Steps</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa ">1</i>
+                        <h4>Learn about the Budget</h4>
+                        <p>The buget is a complex system. Check out the data below and attend a meeting to learn more about it.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa">2</i>
+                        <h4>Review Other City Data</h4>
+                        <p>Making decisions on important city policies without data is like driving with a blindfold on. Our Key System Indicators summarize the broader context in which budgeting decisions are made.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa">3</i>
+                        <h4>Attend a Meeting</h4>
+                        <p>The Mayor and his team are inviting everyone to attend a community budgeting meeting to give their input on four key investment areas.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa">4</i>
+                        <h4>Stay Tuned</h4>
+                        <p>We hope the budget meetings will result in a host of bright ideas on where we should invest. We'll want your input on which ones are best for Somerville.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Services -->
+
+    <!-- Callout -->
+    <div class="callout">
+        <div class="vert-text">
+            <h1>Let's Dig into the Budget...</h1>
+        </div>
+    </div>
+    <!-- /Callout -->
+
+    <!-- Fiscal Management -->
+<br></br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <p>Somerville has some of the lowest property taxes in the area when the residential exemption is factored in. The City has had to rely more on taxes as state aid has delined, but still maintains a generous exemption for residents. The largest categories of expenditures are the schools, public safety and works, and the pensions and benefits of employees.</p>
+                <div id="PropertyTaxChartContainer" style="width:100%; height:400px;"></div> 
+        </div>
+    </div>
+</div>
+
+<br></br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-lg-6 text-center">
+                <div id="RevChartContainer" style="width:100%; height:400px;"></div>
+            </div>
+        <div class="col-xs-12 col-lg-6 text-center">
+                <div id="ExChartContainer" style="width:100%; height:400px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br></br>
+
+    <!-- Call to Action -->
+    <div class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h3>View Other Data and Attend a Meeting</h3>
+                    <a href="http://www.somervillema.gov/dashboard/index.html" target="_blank" class="btn btn-lg btn-default">Key System Indicators</a>
+                    <a href="#calendar" class="btn btn-lg btn-primary">Budget Calendar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Call to Action -->
+
+    <!-- Calendar: made using http://timeline.knightlab.com/ -->
+    <div id="calendar">
+        <div class="container">
+            <div class="row">
+             <iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0AtS7Hv82ZMxjdG4xX19ya1JEMGhqSk9xOWhDTjdSR0E&font=Bevan-PotanoSans&maptype=TERRAIN&lang=en&height=650' width='100%' height='650' frameborder='0'></iframe>   
+            </div>
+        </div>
+    </div>
+    <!-- /Calendar -->
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <ul class="list-inline">
+                        <li><a href="https://www.facebook.com/SomervilleCity" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/SomervilleCity" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <div class="top-scroll">
+                        <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
+                    </div>
+                    <hr>
+                    <p>City of Somerville; <a href="https://github.com/DanielHadley/CommunityBudget">Code.</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    <script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>
